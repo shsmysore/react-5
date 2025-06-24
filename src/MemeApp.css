@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+}
+
+#root {
+  margin: 0 auto;
+}
+
+.meme-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 28px;
+}
+
+.meme-form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.meme-form label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-weight: 500;
+    color: #333;
+}
+
+.meme-form input[type="text"] {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.meme-form button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(to right, #672280, #A626D3);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+}
+
+.meme-form button:hover {
+    background: linear-gradient(to right, #A626D3, #672280);
+    box-shadow: 0 2px 8px rgba(103, 34, 128, 0.15);
+}
+
+@media (max-width: 500px) {
+    .meme-form-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* Image styles*/
+.meme-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.meme-display {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 48px;
+}
+
+.meme-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Most of these properties work as a child element of 'relative' block. */
+.top-text,
+.bottom-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: Impact, 'Arial Black', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 900px;
+    text-shadow: 2px 2px 8px #000, 0 0 2px #000;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.top-text {
+    top: 0;
+}
+
+.bottom-text {
+    bottom: 0;
+}
