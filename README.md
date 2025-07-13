@@ -10,14 +10,22 @@ When React doesn't control the text shown to user, the inherent memory on the ht
 
 ### - React functional programming, Main principles
  
- <b> Pure fucntions </b>
+ <b> * Pure fucntions </b>
 Keep fucntions pure, they shouldn't changes some states elsewhere on re-run. 
 Resunning with exact same set of inputs, should out exact same set of outputs.
 
-<b> Immutability </b>
+<b> * Immutability </b>
 Respect immutabilities. Example - do not change props values in a receving component.
 
-<b> Avoiding side effects </b>
+<b>* Avoiding side effects </b>
 Example is making a fetch request (GET, POST etc) in a component. Sometimes React might need to rerun a components, but this creates unintended side effects of calling network multiple times.
 
-Fetch and update the data into a React state in a componenet, will put it into an infinite loop.
+Fetch and update the data into a React state in a componenet, will put it into an <b>infinite </b> loop.
+
+### - React useEffects
+
+Any code that ineracts with ourside sistems (outside of React) should be processed within a useEffects function. Example - Fetch data from a server, POST something to remote server, localStorage etc.
+
+Interactions with outside systems called "side effects" in React.
+
+**Understand how the React useEffects work **
