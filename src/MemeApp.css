@@ -76,6 +76,10 @@ body {
     margin-top: 48px;
 }
 
+.meme-display span {
+    text-transform: uppercase;
+}
+
 .meme-image {
     width: 100%;
     display: block;
