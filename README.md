@@ -24,8 +24,14 @@ Fetch and update the data into a React state in a componenet, will put it into a
 
 ### - React useEffects
 
-Any code that ineracts with ourside sistems (outside of React) should be processed within a useEffects function. Example - Fetch data from a server, POST something to remote server, localStorage etc.
+Any code that ineracts with outside systems (outside of React) should be processed within a useEffects function. Example - Fetch data from a server, POST something to remote server, localStorage etc.
 
 Interactions with outside systems called "side effects" in React.
 
 **Understand how the React useEffects work **
+
+Reminder: 
+
+1) We can't use local variables when its needed to use across renders. Wrap then using the useState. Because: On first render data is blank, useEffects updates local variable. React may rerender component depending on how app is coded. Now local variable again becomes empty if useState isn't used.
+
+2) The useEffects setup function doesn't accept an async function directly.
