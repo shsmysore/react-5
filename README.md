@@ -35,3 +35,7 @@ Reminder:
 1) We can't use local variables when its needed to use across renders. Wrap then using the useState. Because: On first render data is blank, useEffects updates local variable. React may rerender component depending on how app is coded. Now local variable again becomes empty if useState isn't used.
 
 2) The useEffects setup function doesn't accept an async function directly.
+
+### - Practice useEffects, window size app.
+
+Install react-bootstrap for styling. (Note: Don't mix and use react-bootsrap and vanilla bootstrap)
